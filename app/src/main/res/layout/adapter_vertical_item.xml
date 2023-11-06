@@ -1,0 +1,79 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="animeData"
+            type="com.app.koltinpoc.model.AnimeData" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="40dp"
+        app:cardCornerRadius="8dp"
+        android:layout_margin="10dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+
+            <ImageView
+                android:id="@+id/imageView_vertical_item"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginEnd="16dp"
+                android:scaleType="fitXY"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/guideline"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@tools:sample/avatars"
+                android:layout_marginRight="16dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintGuide_percent="0.4"
+                android:orientation="vertical"/>
+
+            <TextView
+                android:id="@+id/liveStateSeason"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imageView_vertical_item"
+                app:layout_constraintTop_toTopOf="@+id/imageView_vertical_item"
+                tools:text="Live State Example" />
+
+            <TextView
+                android:id="@+id/titleSeason"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@+id/liveStateSeason"
+                app:layout_constraintStart_toStartOf="@+id/liveStateSeason"
+                app:layout_constraintTop_toBottomOf="@+id/liveStateSeason"
+                tools:text="Title Season Now Example" />
+
+            <TextView
+                android:id="@+id/episodeSeason"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@+id/titleSeason"
+                app:layout_constraintTop_toBottomOf="@+id/titleSeason"
+                tools:text="Episodes Season Now Example" />
+
+            <TextView
+                android:id="@+id/dateSeason"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/episodeSeason"
+                tools:text="Date Season Now Example" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</layout>
